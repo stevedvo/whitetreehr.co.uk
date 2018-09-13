@@ -107,8 +107,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
   
   viewer_certificate {
-    acm_certificate_arn = "arn:aws:acm:us-east-1:696293867939:certificate/0b5d6765-2709-4059-bfe5-6ae673b3a2a2"
-    //arn:aws:acm:us-east-1:696293867939:certificate/91d675a3-b875-433e-9bd4-1a3d57b9b8a6
+    acm_certificate_arn = "arn:aws:acm:us-east-1:696293867939:certificate/91d675a3-b875-433e-9bd4-1a3d57b9b8a6"
     ssl_support_method = "sni-only"
     minimum_protocol_version = "TLSv1"
   }
