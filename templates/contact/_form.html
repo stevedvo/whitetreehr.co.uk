@@ -25,10 +25,7 @@
             var phone    = $('#contact-form input[name=contactNumber]').val();
             var content  = $('#contact-form textarea[name=content]').val();
             var heardvia = $('#contact-form select[name=heardvia]').find(':selected').text();
-            var services = new Array();
-            $.each($("#contact-form input[name^=require]:checked"), function() {
-                services.push($(this).val());
-            });
+           
 
             //console.log(name, email, phone, content, heardvia, services, accessKeyId);
 
@@ -40,7 +37,7 @@
             });
 
             var params = {
-                Data: '{"fullname" : "' + name + '", "email" : "' + email + '", "phone" : "' + phone + '", "content" : "' + content + '", "heardvia" : "' + heardvia + '", "services" : "' + services.toString() + '"}',
+                Data: '{"fullname" : "' + name + '", "email" : "' + email + '", "phone" : "' + phone + '", "content" : "' + content + '", "heardvia" : "' + heardvia + '"}',
                 PartitionKey: "1", /* required */
                 StreamName: "delagio-contact-form", /* required */
             };
