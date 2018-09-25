@@ -26,9 +26,20 @@ gulp.task('bower', function() { 
 });
 
 gulp.task('site', function () {
-    return gulp.src('resources/content/**/*.md')
-        .pipe(static_site())
-        .pipe(gulp.dest('web/'))
+    return gulp.src('./resources/content/**/*.tpl.html')
+        .pipe(fileinclude())
+        .pipe(rename({
+            extname: ""
+        }))
+        .pipe(rename({
+            extname: ".html"
+        }))
+        .pipe(htmlclean({
+            protect: /<\!--%fooTemplate\b.*?%-->/g,
+            edit: function(html) { return html.replace(/\begg(s?)\b/ig, 'omelet$1'); }
+        }))
+        .pipe(gulp.dest('./web/content/'))
+        .pipe(notify({ mesage: 'Includes: included' }));
 });
 
 gulp.task('fileinclude', function() {
@@ -80,7 +91,7 @@ gulp.task('sass', function() { 
 });
 
 
-gulp.task('default', ['bower', 'fileinclude', 'icons', 'css', 'sass', 'js', 'images']);
+gulp.task('default', ['bower', 'fileinclude', 'icons', 'css', 'sass', 'js', 'images', 'site']);
 
 // Rerun the task when a file changes
  gulp.task('watch', function() {
