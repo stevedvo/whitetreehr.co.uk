@@ -1,10 +1,1 @@
-node_modules/
-bower_components/
-web/*
-.sass-cache
-config
-vendor
-build
-terraform/*.tfstate
-terraform/*.tfstate*
-.terraform
+wp-config.php
