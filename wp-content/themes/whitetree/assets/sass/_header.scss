@@ -4,7 +4,10 @@ header
 	{
 		.logo-container
 		{
-
+			img
+			{
+				max-width: 200px;
+			}
 		}
 
 		.menu-container
@@ -17,10 +20,13 @@ header
 				height: 55px;
 				top: 0px;
 				right: 0px;
+				transition: 0.5s ease all;
 
 				span.toggle
 				{
 					cursor: pointer;
+					position: relative;
+					left: 50%;
 
 					&::before
 					{
@@ -29,19 +35,86 @@ header
 						font-style: normal;
 						font-weight: normal;
 						text-transform: none !important;
-						background: rgba(144, 149, 154, 0.75);
+						background: rgba(144,149,154,0.75);
 						border-radius: 6px;
 						color: #fff;
 						display: block;
 						font-size: 17px;
-						height: 2em;
-						left: 0.5em;
-						line-height: 2em;
+						height: 35px;
+						line-height: 35px;
 						position: absolute;
 						text-align: center;
-						top: 0.5em;
-						width: 3.5em;
+						top: 9px;
+						width: 60px;
+						transform: translateX(-50%);
 					}
+				}
+			}
+
+			.main-menu
+			{
+				background-color: #192024;
+				position: absolute;
+				right: -200px;
+				width: 200px;
+				height: 100vh;
+				padding: 10px;
+
+				ul.menu
+				{
+					padding: 0px;
+					margin: 0px;
+					list-style: none;
+					text-align: right;
+
+					li
+					{
+						border-bottom: 2px solid #333;
+
+						&:last-of-type
+						{
+							border-bottom: none;
+						}
+
+						a
+						{
+							color: #c5c7c8;
+							font-size: 17px;
+							line-height: 50px;
+							display: inline-block;
+							width: 100%;
+
+							&:hover,
+							&:focus
+							{
+								text-decoration: none;
+								color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body.menu-open
+{
+	right: 200px;
+
+	header
+	{
+		nav
+		{
+			.menu-container
+			{
+				#navButton
+				{
+					right: 200px;
+				}
+
+				.main-menu
+				{
 				}
 			}
 		}

@@ -23,7 +23,7 @@
 							<div id="navButton">
 								<span class="toggle"></span>
 							</div>
-							<div class="main-menu hidden-xs">
+							<div class="main-menu">
 <?php
 								wp_nav_menu(['theme_location' => 'max_mega_menu_1']);
 ?>
