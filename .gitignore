@@ -1,1 +1,3 @@
 wp-config.php
+/wp-content/themes/whitetree/node-modules/*
+/wp-content/themes/whitetree/node_modules/*
