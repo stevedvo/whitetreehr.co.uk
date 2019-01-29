@@ -1,6 +1,6 @@
 <?php
-	get_header(); ?>
-
+	get_header();
+?>
 	<main role="main">
 		<section>
 			<h1><?php the_title(); ?></h1>

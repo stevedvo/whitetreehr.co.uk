@@ -1,0 +1,49 @@
+header
+{
+	nav
+	{
+		.logo-container
+		{
+
+		}
+
+		.menu-container
+		{
+			#navButton
+			{
+				position: fixed;
+				z-index: 10;
+				width: 85px;
+				height: 55px;
+				top: 0px;
+				right: 0px;
+
+				span.toggle
+				{
+					cursor: pointer;
+
+					&::before
+					{
+						content: "\f0c9";
+						font-family: FontAwesome;
+						font-style: normal;
+						font-weight: normal;
+						text-transform: none !important;
+						background: rgba(144, 149, 154, 0.75);
+						border-radius: 6px;
+						color: #fff;
+						display: block;
+						font-size: 17px;
+						height: 2em;
+						left: 0.5em;
+						line-height: 2em;
+						position: absolute;
+						text-align: center;
+						top: 0.5em;
+						width: 3.5em;
+					}
+				}
+			}
+		}
+	}
+}

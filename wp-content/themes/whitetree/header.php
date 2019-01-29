@@ -9,4 +9,27 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<?php get_template_part('page-templates/partials/navigation'); ?>
+		<header>
+<?php
+			$logo = get_field('logo', 'option');
+?>
+			<nav>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-6 logo-container">
+							<a href="/"><img class="fw" src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>"></a>
+						</div>
+						<div class="col-xs-6 menu-container">
+							<div id="navButton">
+								<span class="toggle"></span>
+							</div>
+							<div class="main-menu hidden-xs">
+<?php
+								wp_nav_menu(['theme_location' => 'max_mega_menu_1']);
+?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
