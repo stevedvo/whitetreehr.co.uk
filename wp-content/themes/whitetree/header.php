@@ -16,11 +16,11 @@
 			<nav>
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-xs-6 logo-container">
-							<a href="/"><img class="fw" src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>"></a>
+						<div class="col-xs-6 col-sm-3 logo-container">
+							<a href="/"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>"></a>
 						</div>
-						<div class="col-xs-6 menu-container">
-							<div id="navButton">
+						<div class="col-xs-6 col-sm-9 menu-container">
+							<div id="navButton" class="visible-xs">
 								<span class="toggle"></span>
 							</div>
 							<div class="main-menu">

@@ -1,12 +1,14 @@
 header
 {
+	padding-top: 5px;
+
 	nav
 	{
 		.logo-container
 		{
 			img
 			{
-				max-width: 200px;
+				width: 120px;
 			}
 		}
 
@@ -54,11 +56,13 @@ header
 			.main-menu
 			{
 				background-color: #192024;
-				position: absolute;
+				position: fixed;
 				right: -200px;
+				top: -5px;
 				width: 200px;
 				height: 100vh;
 				padding: 10px;
+				transition: right 0.5s ease;
 
 				ul.menu
 				{
@@ -115,8 +119,71 @@ body.menu-open
 
 				.main-menu
 				{
+					right: 0px;
 				}
 			}
 		}
 	}
+}
+
+@media (min-width: 768px)
+{
+	body
+	{
+		&.menu-open
+		{
+			right: 0px;
+		}
+
+		header
+		{
+			height: 50px;
+			position: fixed;
+			top: 0px;
+			width: 100%;
+			background-color: white;
+
+			nav
+			{
+				.menu-container
+				{
+					.main-menu
+					{
+						background-color: initial;
+						position: static;
+						width: initial;
+						height: auto;
+						padding: 20px 0px 0px;
+
+						ul.menu
+						{
+							li
+							{
+								border-bottom: none;
+								display: inline-block;
+
+								a
+								{
+									padding: 0px 20px;
+									color: #333;
+									line-height: 21px;
+
+									&:hover,
+									&:focus
+									{
+										color: #33f;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		main
+		{
+			margin-top: 50px;
+		}
+	}	
 }
