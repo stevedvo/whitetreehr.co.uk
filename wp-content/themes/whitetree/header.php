@@ -16,7 +16,7 @@
 			<nav>
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-xs-6 col-sm-3 logo-container">
+						<div class="hidden-xs col-sm-3 logo-container">
 							<a href="/"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>"></a>
 						</div>
 						<div class="col-xs-6 col-sm-9 menu-container">
