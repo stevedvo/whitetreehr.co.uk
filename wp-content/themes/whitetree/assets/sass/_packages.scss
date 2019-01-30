@@ -1,0 +1,22 @@
+section#packages
+{
+	padding-bottom: 60px;
+
+	ul
+	{
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+
+		li
+		{
+			padding: 10px 0px;
+			border-bottom: $border-colour solid 1px;
+
+			&:last-of-type
+			{
+				border-bottom: none;
+			}
+		}
+	}
+}

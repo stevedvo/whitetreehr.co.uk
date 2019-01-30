@@ -4,6 +4,7 @@ $(document).ready(function($)
 {
 	menuInteraction();
 	equaliseContainerHeights($("body.home article.service"));
+	addRequiredAsterisks($("form.wpcf7-form"));
 });
 
 $(window).on('resize', function()
@@ -46,4 +47,12 @@ function equaliseContainerHeights($selector)
 			}
 		}
 	}
+}
+
+function addRequiredAsterisks($form)
+{
+	$form.find(".wpcf7-validates-as-required").each(function()
+	{
+		$(this).parent().append("<span class='required-asterisk'>*</span>");
+	});
 }

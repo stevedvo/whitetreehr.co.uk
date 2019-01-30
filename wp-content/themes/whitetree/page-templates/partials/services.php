@@ -4,16 +4,14 @@
 <?php
 			foreach ($services as $service)
 			{
+				$image = get_field('image', $service);
+				$title = get_the_title($service);
+				$introduction = get_field('introduction', $service);
+				$link = $service->post_name;
 ?>
 				<div class="col-xs-12 service-container">
-					<a href="<?= $link; ?>">
+					<a href="/services/#<?= $link; ?>">
 						<article class="service">
-<?php
-							$image = get_field('image', $service);
-							$title = get_the_title($service);
-							$introduction = get_field('introduction', $service);
-							$link = get_the_permalink($service);
-?>
 							<div class="image-container">
 								<i class="icon major fa <?= $image; ?>"></i>
 							</div>
