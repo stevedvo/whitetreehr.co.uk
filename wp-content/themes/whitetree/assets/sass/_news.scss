@@ -1,0 +1,42 @@
+section#news
+{
+	padding-bottom: 60px;
+
+	h3
+	{
+		letter-spacing: 4px;
+		// margin-bottom: 20px;
+	}
+
+	a
+	{
+		display: block;
+		border-bottom: $border-colour solid 1px;
+
+		&:last-of-type
+		{
+			border-bottom: none;
+		}
+
+		article
+		{
+			padding: 20px 0px;
+
+			h4
+			{
+
+			}
+
+			span.article-date
+			{
+				font-size: 12px;
+				line-height: 16px;
+			}
+
+			div.article-excerpt-container
+			{
+				margin-top: 10px;
+			}
+		}
+	}
+}
