@@ -1,23 +1,27 @@
 <?php
-	get_header(); ?>
-
+	get_header();
+?>
 	<main role="main">
-		<section>
-			<h1><?php the_title(); ?></h1>
+		<section id="page-headings">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1 class="page-title"><?php the_title(); ?></h1>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="post-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
 <?php
-			if (have_posts())
-			{
-				while (have_posts())
-				{
-					the_post();
+						the_content();
 ?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<?php the_content(); ?>
-					</article>
-<?php
-				}
-			}
-?>
+					</div>
+				</div>
+			</div>
 		</section>
 	</main>
 <?php
