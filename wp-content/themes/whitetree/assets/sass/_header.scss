@@ -1,0 +1,191 @@
+header
+{
+	nav
+	{
+		.logo-container
+		{
+			img
+			{
+				width: 120px;
+			}
+		}
+
+		.menu-container
+		{
+			min-height: unset;
+
+			#navButton
+			{
+				position: fixed;
+				z-index: 10;
+				width: 85px;
+				height: 55px;
+				top: 0px;
+				right: 0px;
+				transition: 0.5s ease all;
+
+				span.toggle
+				{
+					cursor: pointer;
+					position: relative;
+					left: 50%;
+
+					&::before
+					{
+						content: "\f0c9";
+						font-family: FontAwesome;
+						font-style: normal;
+						font-weight: normal;
+						text-transform: none !important;
+						background: rgba(144,149,154,0.75);
+						border-radius: 6px;
+						color: #fff;
+						display: block;
+						font-size: 17px;
+						height: 35px;
+						line-height: 35px;
+						position: absolute;
+						text-align: center;
+						top: 9px;
+						width: 60px;
+						transform: translateX(-50%);
+					}
+				}
+			}
+
+			.main-menu
+			{
+				background-color: #192024;
+				position: fixed;
+				right: -200px;
+				width: 200px;
+				height: 100vh;
+				padding: 10px;
+				transition: right 0.5s ease;
+
+				ul.menu
+				{
+					padding: 0px;
+					margin: 0px;
+					list-style: none;
+					text-align: right;
+
+					li
+					{
+						border-bottom: 2px solid #333;
+
+						&:last-of-type
+						{
+							border-bottom: none;
+						}
+
+						a
+						{
+							color: #c5c7c8;
+							font-size: 17px;
+							line-height: 50px;
+							display: inline-block;
+							width: 100%;
+
+							&:hover,
+							&:focus
+							{
+								text-decoration: none;
+								color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body.menu-open
+{
+	right: 200px;
+
+	header
+	{
+		nav
+		{
+			.menu-container
+			{
+				#navButton
+				{
+					right: 200px;
+				}
+
+				.main-menu
+				{
+					right: 0px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px)
+{
+	body
+	{
+		&.menu-open
+		{
+			right: 0px;
+		}
+
+		header
+		{
+			padding-top: 5px;
+			height: 50px;
+			position: fixed;
+			top: 0px;
+			width: 100%;
+			background-color: white;
+			z-index: 10;
+			box-shadow: rgba(9, 9, 9, 0.25) 0px 1px 2px 0px;
+
+			nav
+			{
+				.menu-container
+				{
+					.main-menu
+					{
+						background-color: initial;
+						position: static;
+						width: initial;
+						height: auto;
+						padding: 20px 0px 0px;
+
+						ul.menu
+						{
+							li
+							{
+								border-bottom: none;
+								display: inline-block;
+
+								a
+								{
+									padding: 0px 20px;
+									color: $text-colour;
+									line-height: 21px;
+
+									&:hover,
+									&:focus
+									{
+										color: #23527c;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		main
+		{
+			margin-top: 50px;
+		}
+	}	
+}

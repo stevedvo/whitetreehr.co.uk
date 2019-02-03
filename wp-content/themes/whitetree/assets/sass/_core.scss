@@ -1,0 +1,49 @@
+@font-face
+{
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+$text-colour: #666f77;
+$border-colour: #aaa;
+
+.fw
+{
+	width: 100%;
+}
+
+body
+{
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+	right: 0px;
+	transition: 0.5s ease all;
+	overflow-x: hidden;
+	color: $text-colour;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+{
+	margin: 0px;
+}
+
+a
+{
+	color: $text-colour;
+
+	&:hover,
+	&:focus
+	{
+		text-decoration: none;
+	}
+}

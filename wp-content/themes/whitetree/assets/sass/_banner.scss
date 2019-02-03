@@ -1,0 +1,81 @@
+section#banner
+{
+	height: 50vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+
+	.banner-content-container
+	{
+		height: 50vh;
+		position: relative;
+
+		.banner-content-container-inner
+		{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		h1
+		{
+			color: white;
+			text-shadow: #333 1px 1px;
+			text-align: center;
+			margin: 0px 0px 40px;
+			letter-spacing: 4px;
+		}
+
+		a.button
+		{
+			text-align: center;
+			display: block;
+			width: 200px;
+			max-width: 100%;
+			margin: auto;
+			font-size: 20px;
+			line-height: 50px;
+			border-radius: 6px;
+
+			&.opaque
+			{
+				background-color: #31ACB4;
+				color: white;
+
+				&:hover
+				{
+					background-color: #76a9d7;
+					text-decoration: none;
+				}
+			}
+
+			&.transparent
+			{
+				border-color: #333;
+				color: white;
+				text-shadow: #333 1px 1px;
+				background-color: rgba(144, 144, 144, 0.275);
+
+				&:hover
+				{
+					background-color: rgba(144, 144, 144, 0.55);
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+section#post-banner-intro
+{
+	margin: 60px 0px;
+	text-align: center;
+
+	h2
+	{
+		letter-spacing: 4px;
+		color: #666f77;
+	}
+}

@@ -1,0 +1,29 @@
+form.wpcf7-form
+{
+	input,
+	textarea
+	{
+		width: calc(100% - 15px);
+		padding: 5px;
+		margin-bottom: 15px;
+		border: $border-colour solid 1px;
+		border-radius: 6px;
+		background-color: #ddd;
+	}
+
+	input[type='submit']
+	{
+		background-color: black;
+		color: white;
+		max-width: 300px;
+		text-transform: uppercase;
+	}
+
+	.required-asterisk
+	{
+		position: absolute;
+		top: -8px;
+		right: -15px;
+		color: red;
+	}
+}
